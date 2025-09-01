@@ -105,16 +105,11 @@ namespace TextTween
 
         private void Update()
         {
-            if (!Application.isPlaying || Mathf.Approximately(_progress, Progress))
+            if (Mathf.Approximately(_progress, Progress))
             {
                 return;
             }
 
-            Apply();
-        }
-
-        private void OnDidApplyAnimationProperties()
-        {
             Apply();
         }
 
