@@ -121,7 +121,7 @@ namespace TextTween
             for (int i = 0, ci = 0; i < length && ci < charLength; i++, ci = i / vertexPerChar)
             {
                 float3 bottomLeft = _vertices[ci * vertexPerChar];
-                float3 topRight = _vertices[ci * vertexPerChar + 3];
+                float3 topRight = _vertices[ci * vertexPerChar + 2];
                 MinMaxAABB charBounds = new(bottomLeft, topRight);
                 _chars[offset + i] = new CharData(
                     new int2(ci, charLength),
