@@ -113,6 +113,11 @@ namespace TextTween
             Apply();
         }
 
+        private void OnDidApplyAnimationProperties()
+        {
+            Apply();
+        }
+
         public void Add(TMP_Text tmp)
         {
             if (tmp == null || MeshData.Contains(tmp))
